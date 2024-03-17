@@ -45,11 +45,6 @@ public class ItemModShovel extends ShovelItem implements DragonSteelOverrides<It
         }
     }
 
-    @Override
-    public int getMaxDamage(ItemStack stack) {
-        return isDragonsteel(getTier()) ? IafConfig.dragonsteelBaseDurability : getTier().getUses();
-    }
-
 
     @Override
     public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {

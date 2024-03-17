@@ -48,11 +48,6 @@ public class ItemModAxe extends AxeItem implements DragonSteelOverrides<ItemModA
     }
 
     @Override
-    public int getMaxDamage(ItemStack stack) {
-        return isDragonsteel(getTier()) ? IafConfig.dragonsteelBaseDurability : getTier().getUses();
-    }
-
-    @Override
     public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
         hurtEnemy(this, stack, target, attacker);
         return super.hurtEnemy(stack, target, attacker);

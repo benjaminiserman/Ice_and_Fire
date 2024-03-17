@@ -26,11 +26,6 @@ public class ItemModSword extends SwordItem implements DragonSteelOverrides<Item
     }
 
     @Override
-    public int getMaxDamage(ItemStack stack) {
-        return isDragonsteel(getTier()) ? IafConfig.dragonsteelBaseDurability : getTier().getUses();
-    }
-
-    @Override
     @Deprecated
     public @NotNull Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(@NotNull EquipmentSlot equipmentSlot) {
         return equipmentSlot == EquipmentSlot.MAINHAND && isDragonsteel(getTier()) ? this.bakeDragonsteel() : super.getDefaultAttributeModifiers(equipmentSlot);
